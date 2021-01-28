@@ -11,8 +11,16 @@
 * returns: ["", "a"]
 */
 
-function removeStringsEndingInBang() {
-
+function removeStringsEndingInBang(arr) {
+  let newArr = [];
+  
+  for (let i = 0; i < arr.length; i++) {
+    let lastChar = arr[i][arr[i].length - 1]
+    if (lastChar !== "!") {
+      newArr.push(arr[i]);
+    }
+  }
+  return newArr;
 }
 
 module.exports = removeStringsEndingInBang

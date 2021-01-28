@@ -11,8 +11,12 @@
 * returns: 167
 */
 
-function totalNumberOfStudents() {
-
+function totalNumberOfStudents(arr) {
+  let studentSum = 0;
+  arr.map((el) => {
+    return (studentSum += el.studentCount);
+  });
+  return studentSum;
 }
 
 module.exports = totalNumberOfStudents
